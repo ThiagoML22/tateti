@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    text-align: center;
+    background-color: #fefefe;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #d32f2f;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    font-size: 1.1rem;
+    color: #424242;
+}
+
+.score-item {
+    background-color: #e8e8e8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 15px;
+    margin: 30px auto;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #757575;
+    border-radius: 15px;
+    transition: background-color 0.4s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #ffccbc;
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 40px;
+    border: 4px solid #424242;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#winnerMessage.show {
+    display: flex;
+}
+
+#winnerText {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #d32f2f;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #d32f2f;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.4s, transform 0.3s;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.1);
+}
